@@ -90,18 +90,18 @@
   tasks:
     - name: Checkout CI/CD demo code..
       git:
-        repo: 'https://github.com/uzugic/openshift-cd-demo'
-        dest: /root/openshift-cd-demo
+        repo: 'https://github.com/rasomonac/rasomonac-ocp-cicd-app.git'
+        dest: /root/rasomonac-ocp-cicd-app
     - name: Permissions..
-      shell: sed -i -e 's/\r$//' /root/openshift-cd-demo/scripts/provision.sh
+      shell: sed -i -e 's/\r$//' /root/rasomonac-ocp-cicd-app/scripts/provision.sh
     - name: Adding permissions
-      shell: chmod 755 /root/openshift-cd-demo/scripts/provision.sh
+      shell: chmod 755 /root/rasomonac-ocp-cicd-app/scripts/provision.sh
     - name: permiissions..
-      shell: sed -i -e 's/\r$//' /root/openshift-cd-demo/cicd-template.yaml
+      shell: sed -i -e 's/\r$//' /root/rasomonac-ocp-cicd-app/cicd-template.yaml
     - name: Adding rest of permissions
-      shell: chmod 755 /root/openshift-cd-demo/cicd-template.yaml   
+      shell: chmod 755 /root/rasomonac-ocp-cicd-app/cicd-template.yaml   
     - name: Provision the demo environment..
-      shell: /root/openshift-cd-demo/scripts/provision.sh --user andrew deploy
+      shell: /root/rasomonac-ocp-cicd-app/scripts/provision.sh --user andrew deploy
   tags:
     - cicd
 
