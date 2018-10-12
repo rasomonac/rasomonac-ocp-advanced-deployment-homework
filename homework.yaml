@@ -50,7 +50,7 @@
   hosts: nfs
   tasks:
     - name: "Create PV directories and add them to be exported"
-      script: ./scripts/create_pvs.sh
+      script: ./scripts/create-pvs.sh
     - name: Restarting NFS Server...
       shell: systemctl restart nfs-server
   tags:
@@ -60,13 +60,13 @@
   hosts: localhost
   tasks:
     - name: "Creating the files.."
-      script: ./scripts/pvs_small.sh
+      script: ./scripts/pvs-small.sh
   
 - name: Create 25 definitions files for PVs 10G size
   hosts: localhost
   tasks:
     - name: "Creating the files.."
-      script: ./scripts/pvs_large.sh
+      script: ./scripts/pvs-large.sh
 
 - name: Create all PVs from definitions files
   hosts: localhost
