@@ -183,4 +183,4 @@
   hosts: localhost
   tasks:
     - name: Multitenancy Test
-      script: ./scripts/multitenancy.sh
+      script: ./scripts/multitenancy-test.sh
