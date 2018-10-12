@@ -9,9 +9,9 @@
   hosts: localhost
   tasks: 
     - name: "Script setup permision set.."
-      shell: chmod 755 ./scripts/script_setup.sh
+      shell: chmod 755 ./scripts/script-setup.sh
     - name: "Setting up the scripts.."
-      shell: ./scripts/script_setup.sh
+      shell: ./scripts/script-setup.sh
 
 - name: Verify Installation and Configuration of Docker
   hosts: nodes
