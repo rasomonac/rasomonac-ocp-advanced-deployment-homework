@@ -60,13 +60,13 @@
   hosts: localhost
   tasks:
     - name: "Creating the files.."
-      script: ./scripts/pvs_5Gsize.sh
+      script: ./scripts/pvs_small.sh
   
 - name: Create 25 definitions files for PVs 10G size
   hosts: localhost
   tasks:
     - name: "Creating the files.."
-      script: ./scripts/pvs_10Gsize.sh
+      script: ./scripts/pvs_large.sh
 
 - name: Create all PVs from definitions files
   hosts: localhost
