@@ -155,7 +155,7 @@
   hosts: masters
   tasks:
     - name: Adding users for alpha and beta
-      script: ./scripts/add-users.sh
+      script: ./scripts/create-users.sh
   tags:
     - create_users
 
